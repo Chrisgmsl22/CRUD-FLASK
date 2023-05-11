@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Persona</title>
+    <!-- Agregamos bootstrap     -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+  <h1> Agregar Persona</h1>
+  <form class="form" method="POST">
+    {{forma.csrf_token}}
+    <p >
+      {{forma.nombre.label}} <br>
+      {{forma.nombre(size=30)}}
+    </p>
+    <p >
+      {{forma.apellido.label}} <br>
+      {{forma.apellido(size=30)}}
+    </p>
+    <p >
+      {{forma.email.label}} <br>
+      {{forma.email(size=30)}}
+    </p>
+    <p >
+      {{forma.enviar()}}
+    </p>
+  </form>
+
+</body>
+</html>
